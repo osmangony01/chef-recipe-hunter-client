@@ -6,6 +6,7 @@ import { FaSearch } from 'react-icons/fa';
 const Header = () => {
     return (
         <div className='header'>
+            <div className='inner-content'>
             <NavBar></NavBar>
             <div className='banner-content'>
                 <h2>What are your favorite <br />food?</h2>
@@ -14,6 +15,7 @@ const Header = () => {
                     <input className='search' type="text" placeholder='Search...'/>
                     <span className='search-icon'><FaSearch color='white'></FaSearch></span>
                 </div>
+            </div>
             </div>
         </div>
     );

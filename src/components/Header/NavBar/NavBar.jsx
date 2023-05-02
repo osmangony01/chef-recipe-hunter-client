@@ -21,7 +21,7 @@ const NavBar = () => {
                 <div className='title-nav'>
                     <img src="/images/nav-title-logo.jpg" alt="" width="60px" height="45px"
                     />
-                    <h2>Flavor Frenzy</h2>
+                    <h2>Liberty's Table</h2>
                 </div>
                 <div className='toggle-icon'>
                     <img src="" alt="asdf" />
