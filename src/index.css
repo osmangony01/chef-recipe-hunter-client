@@ -11,3 +11,112 @@ body {
   font-size: 16px;
   font-weight: 500;
 }
+
+
+/* For Login and Registraion Section */
+.login-layout {
+  background-color: #f2f4fd;
+  padding: 50px 0;
+}
+
+.login-section {
+  width: 40%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.line {
+  margin: 32px 0;
+  background-color: #e9dcdc;
+  height: 1px;
+  border: 0;
+}
+
+.form {
+  padding: 0 16px;
+}
+
+.input-control {
+  font-size: 17px;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 4px;
+  outline: 0;
+  background-color: aliceblue;
+}
+
+.input-control:focus {
+  border: 1px solid rgb(83, 83, 245);
+}
+
+.input-control::placeholder {
+  font-size: 16px;
+}
+
+.input-group {
+  margin-bottom: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  border: 0;
+  outline: 0;
+  background-color: rgb(70 110 241);
+  border-radius: 4px;
+  margin: 10px 0 5px;
+
+}
+
+.submit-btn:hover {
+  background-color: rgb(6, 57, 228);
+}
+
+.login-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.register-link {
+  font-size: 14px;
+  text-align: right;
+}
+
+.register-link-color {
+  color: orange;
+}
+
+
+@media screen and (max-width:992px) {
+  .login-section {
+      width: 50%;
+  }
+}
+
+@media screen and (max-width:778px) {
+  .login-section {
+      width: 70%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .login-section {
+      width: 90%;
+  }
+
+}
+
+/* end login and registration section */
+

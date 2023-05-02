@@ -1,0 +1,55 @@
+.pass-control {
+    position: relative;
+  }
+  
+  .pass-icon {
+    position: absolute;
+    top: 44px;
+    right: 24px;
+    color: gray;
+  }
+
+
+.third-party-login {
+    /* width: 34%;
+    margin: 0 auto;
+    padding: 20px 0 0; */
+    margin-top: 25px;
+    padding: 0 16px;
+  
+  }
+  
+  .google-btn {
+    width: 100%;
+    color: rgb(88, 88, 88);
+    /* background-color: #3a3737; */
+    background-color: white;
+    border: 1px solid #cbc3c3;
+    outline: 0;
+    border-radius: 4px;
+    padding: 12px 0;
+    font-size: 16px;
+  }
+  
+  .google-btn:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .github-btn {
+    width: 100%;
+    color: rgb(88, 88, 88);
+    border: 1px solid #cbc3c3;
+    /* background-color: #894aad; */
+    background-color: white;
+    outline: 0;
+    border-radius: 4px;
+    padding: 12px 0;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  
+  .github-btn:hover {
+    background-color: #8103c9;
+    color: white;
+  }
