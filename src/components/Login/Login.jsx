@@ -1,16 +1,43 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css';
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import NavBar from '../Header/NavBar/NavBar';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const Login = () => {
     const [passShow, setPassShow] = useState(true);
+    
+    const { signIn } = useContext(AuthContext);
+    const navigate = useNavigate();
 
-    const handleLogin =()=>[
+    // const location = useLocation();
+    // const from = location.state?.from?.pathname || "/category/0";
 
-    ]
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        
+
+        signIn(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                form.reset();
+                navigate("/", {replace: true});
+                // navigate(from, {replace: true});
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+        console.log(email, password);
+
+    }
+
     return (
         <div>
         <NavBar></NavBar>

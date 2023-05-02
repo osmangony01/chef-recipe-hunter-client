@@ -6,7 +6,7 @@ const Footer = () => {
         <div className='footer'>
             <div className='footer-title-section'>
                 <img src="/images/footer-icon.jpg" alt="" width="60" height="60"/>
-                <p className='footer-title'>Liberty's Table</p>
+                <p className='footer-title'>Flavor Frenzy</p>
             </div>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, maxime quidem voluptate provident iste illo nesciunt tempora deleniti similique alias nemo non minima dolore sint quasi illum excepturi sit expedita.</p>
             <div className='footer-icons'>
@@ -15,7 +15,7 @@ const Footer = () => {
                 <span className="footer-icon"><FaTwitter></FaTwitter></span>
                 <span className="footer-icon"><FaGooglePlusG ></FaGooglePlusG></span>
             </div>
-            <p>&copy; Copyrights Liberty's Table 2023. All rights reserved</p>
+            <p>&copy; Copyrights Flavor Frenzy 2023. All rights reserved</p>
         </div>
     );
 };
