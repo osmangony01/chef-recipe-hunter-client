@@ -27,7 +27,7 @@ const route = createBrowserRouter([
             },
             {
                 path: '/chef/:id',
-                element: <ViewRecipe></ViewRecipe>,
+                element: <PrivateRoute><ViewRecipe></ViewRecipe></PrivateRoute>,
                 loader: viewChefRecipe,
 
             }

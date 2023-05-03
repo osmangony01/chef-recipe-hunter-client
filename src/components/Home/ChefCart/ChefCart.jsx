@@ -1,5 +1,7 @@
 import React from 'react';
 import './ChefCart.css';
+import { Link } from 'react-router-dom';
+import { FaThumbsUp } from 'react-icons/fa';
 
 const ChefCart = ({ chef }) => {
 
@@ -8,12 +10,12 @@ const ChefCart = ({ chef }) => {
     return (
 
         <div className='chef-cart'>
-            <img className='chef-img' src="/images/chef1.jpg" alt="" />
+            <img className='chef-img' src={chef_picture} alt="" />
             <p className='chef-name'>{chef_name}</p>
             <p>Expericen: <span>{years_of_experience}</span> years</p>
             <p>Number of Recipes: {number_of_recipes}</p>
-            <p>Likes: <span className='like'>{like}</span></p>
-            <a href='#'><button className='view-recipes'>View Recipes</button></a>
+            <p><FaThumbsUp color='blue' size={20}></FaThumbsUp> <span className='like'>{like}</span></p>
+            <Link to={`/chef/${id}`}><button className='view-recipes'>View Recipes</button></Link>
         </div>
 
     );

@@ -12,8 +12,8 @@ const Login = () => {
     const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    // const location = useLocation();
-    // const from = location.state?.from?.pathname || "/category/0";
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -28,8 +28,8 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 form.reset();
-                navigate("/", { replace: true });
-                // navigate(from, {replace: true});
+                // navigate("/", { replace: true });
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error.message);
@@ -43,7 +43,8 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                navigate("/", { replace: true });
+                // navigate("/", { replace: true });
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error.message);
@@ -55,7 +56,8 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                navigate("/", { replace: true });
+                // navigate("/", { replace: true });
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error.message);
