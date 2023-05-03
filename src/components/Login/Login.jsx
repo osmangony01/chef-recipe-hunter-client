@@ -8,8 +8,8 @@ import { AuthContext } from '../../provider/AuthProvider';
 
 const Login = () => {
     const [passShow, setPassShow] = useState(true);
-    
-    const { signIn, signInWithGoogle } = useContext(AuthContext);
+
+    const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
     const navigate = useNavigate();
 
     // const location = useLocation();
@@ -21,14 +21,14 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        
+
 
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 form.reset();
-                navigate("/", {replace: true});
+                navigate("/", { replace: true });
                 // navigate(from, {replace: true});
             })
             .catch(error => {
@@ -43,20 +43,28 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                navigate("/", {replace: true});
+                navigate("/", { replace: true });
             })
             .catch(error => {
                 console.log(error.message);
             })
     }
 
-    const handleGithubSignIn =() =>{
-
+    const handleGithubSignIn = () => {
+        signInWithGithub()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                navigate("/", { replace: true });
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
     }
 
     return (
         <div>
-        <NavBar></NavBar>
+            <NavBar></NavBar>
             <div className='login-layout'>
                 <div className='login-section'>
                     <h3 className='login-title'>Login your account</h3>
@@ -64,11 +72,11 @@ const Login = () => {
                     <form action="" className='form' onSubmit={handleLogin}>
                         <div className='input-group'>
                             <label htmlFor="" className='login-label'>Email</label>
-                            <input type="email" name="email" className='input-control' placeholder='Enter your email' required/>
+                            <input type="email" name="email" className='input-control' placeholder='Enter your email' required />
                         </div>
                         <div className='input-group pass-control'>
                             <label htmlFor="" className='login-label'>Password</label>
-                            <input type={passShow ? "password" : "text"} name="password" className='input-control' placeholder='Enter your password' required/>
+                            <input type={passShow ? "password" : "text"} name="password" className='input-control' placeholder='Enter your password' required />
                             <small onClick={() => setPassShow(!passShow)} className='pass-icon'>
                                 {passShow ? <span>{<FaEyeSlash></FaEyeSlash>}</span> : <span>{<FaEye></FaEye>}</span>}
                             </small>
@@ -77,10 +85,10 @@ const Login = () => {
                         <p className='register-link'>You don't have an account? go to <Link to="/register" className='register-link-color'>Register</Link></p>
                     </form>
                     <div className='third-party-login'>
-                   <p> <button className='google-btn btn-aling' onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> Continue with Google</button></p>
-                   <p><button className='github-btn' onClick={handleGithubSignIn}><FaGithub></FaGithub>Continue with Github</button></p>
-                    
-                </div>
+                        <p> <button className='google-btn btn-aling' onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> Continue with Google</button></p>
+                        <p><button className='github-btn' onClick={handleGithubSignIn}><FaGithub></FaGithub>Continue with Github</button></p>
+
+                    </div>
                 </div>
             </div>
             <Footer></Footer>

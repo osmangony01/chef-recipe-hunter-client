@@ -1,0 +1,44 @@
+
+.chef-cart{
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+   
+}
+.chef-cart p{
+    padding: 6px 0;
+}
+.chef-img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.chef-name{
+    font-size: 18px;
+    font-weight: 600;
+}
+.chef-cart:hover{
+    border:1px solid orange;
+    box-shadow: 1px 1px 5px 2px #e9d1d1;
+}
+
+.view-recipes{
+    border: 0;
+    background: linear-gradient(90deg,#7E90FE 0%,#9873FF 100%);
+    border-radius: 6px;
+    color: #fff;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top:6px;
+    font-weight:500;
+}
+.view-recipes:hover{
+    background: linear-gradient(90deg,#5b71fa 0%,#714fce 100%); 
+}
+
+.like{
+    color: orangered;
+}
