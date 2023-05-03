@@ -9,7 +9,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 const Login = () => {
     const [passShow, setPassShow] = useState(true);
     
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
 
     // const location = useLocation();
@@ -38,6 +38,22 @@ const Login = () => {
 
     }
 
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                navigate("/", {replace: true});
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
+
+    const handleGithubSignIn =() =>{
+
+    }
+
     return (
         <div>
         <NavBar></NavBar>
@@ -61,8 +77,8 @@ const Login = () => {
                         <p className='register-link'>You don't have an account? go to <Link to="/register" className='register-link-color'>Register</Link></p>
                     </form>
                     <div className='third-party-login'>
-                   <p> <button className='google-btn btn-aling'><FaGithub></FaGithub> Continue with Google</button></p>
-                   <p><button className='github-btn'><FaGoogle></FaGoogle> Continue with Github</button></p>
+                   <p> <button className='google-btn btn-aling' onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> Continue with Google</button></p>
+                   <p><button className='github-btn' onClick={handleGithubSignIn}><FaGithub></FaGithub>Continue with Github</button></p>
                     
                 </div>
                 </div>

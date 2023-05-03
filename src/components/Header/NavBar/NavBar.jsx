@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 import { FaBars, FaTimes, FaUserCircle } from 'react-icons/fa';
+import ActiveLink from '../../ActiveLink/ActiveLink';
 
 const NavBar = () => {
     const [toggle, setToggle] = useState(true);
@@ -30,11 +31,11 @@ const NavBar = () => {
             </div>
             <div className={toggle ? "menu-list" : "menu-list menu-list-none"}>
                 <ul>
-                    <li><Link className="nav-link" to="/">Home</Link></li>
-                    <li><Link className="nav-link" to="/destination">Blog</Link></li>
-                    <li><Link className="nav-link" to="/blog">About</Link></li>
-                    <li><Link className="nav-link" to="/contact">Contact</Link></li>
-                    <li><Link className="nav-link" to="/login">Login</Link></li>
+                    <li><ActiveLink className="nav-link" to="/">Home</ActiveLink></li>
+                    <li><ActiveLink className="nav-link" to="/destination">Blog</ActiveLink></li>
+                    <li><ActiveLink className="nav-link" to="/blog">About</ActiveLink></li>
+                    <li><ActiveLink className="nav-link" to="/contact">Contact</ActiveLink></li>
+                    <li><ActiveLink className="nav-link" to="/login">Login</ActiveLink></li>
                     <li className='user-icon'>
                         <img src="" alt="asdf" />
                         <span className=''><FaUserCircle size={24}></FaUserCircle></span>
