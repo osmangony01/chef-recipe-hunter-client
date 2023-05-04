@@ -1,0 +1,122 @@
+.about {
+    padding: 50px 150px;
+    background-color: #e5e1e1;
+
+}
+.about-heading h2{
+    color: orangered;
+    margin-bottom: 70px;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+.about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.about-img-field {
+    width: 100%;
+}
+
+.about-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about-info p {
+    margin-bottom: 10px;
+}
+
+.about-info-title {
+    color: orangered;
+    font-weight: 600;
+}
+
+.about-info-heading {
+    font-size: 28px;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.about2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-color: rgb(241, 237, 237);
+    padding: 100px 150px 80px;
+}
+
+.about2-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about2-desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 0;
+    padding:20px 15px;
+    border-radius: 4px;
+    color: black;
+}
+
+
+.about2-desc-icon{
+    border-radius: 50%;
+    border: 0;
+    padding: 15px;
+    margin: 10px;
+    background-color: #f5f5ff;
+}
+
+
+@media screen and (max-width:992px) {
+    /* .about-us{
+        grid-template-columns: 1fr;
+    }
+    .about-us .about-img-field:nth-of-type(1){
+        order: 2;
+    }
+    .about-us .about-info:nth-of-type(2){
+        order: 1;
+    } */
+    .about {
+        padding: 50px 120px;
+    
+    }
+    .about2 {
+        padding: 100px 120px 80px;
+    }
+}
+
+@media screen and (max-width:786px) {
+    .about-us{
+        grid-template-columns: 1fr;
+    }
+    .about-us .about-img-field:nth-of-type(1){
+        order: 2;
+    }
+    .about-us .about-info:nth-of-type(2){
+        order: 1;
+    }
+    .about2 {
+        grid-template-columns: 1fr;
+        padding: 100px 120px 80px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about {
+        padding: 50px 30px;
+        background-color: #e5e1e1;
+    
+    }
+    .about2 {
+        padding: 90px 30px 70px;
+    }
+}
