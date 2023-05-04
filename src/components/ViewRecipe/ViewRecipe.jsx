@@ -7,7 +7,7 @@ import { FaThumbsUp } from 'react-icons/fa';
 const ViewRecipe = () => {
 
     const chefRecipes = useLoaderData();
-    console.log(chefRecipes);
+    // console.log(chefRecipes);
     const { chef_name, chef_picture, years_of_experience, number_of_recipes, like, recipe_info } = chefRecipes;
 
     return (

@@ -41,7 +41,7 @@ const AboutUs = () => {
                             <img src="/images/mission.png" className='about2-desc-icon' alt="" />
                         </div>
                         <div>
-                            <h2 className='about2-title'>Mision</h2>
+                            <h2 className='about2-title'>Mission</h2>
                             <p>To inspire and empower home cooks by providing a comprehensive collection of recipes and cooking resources to improve cooking skills and make informed food choices.</p>
                         </div>
                     </div>

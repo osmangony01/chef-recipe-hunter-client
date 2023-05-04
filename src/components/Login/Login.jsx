@@ -30,7 +30,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
+                // console.log(loggedUser);
                 form.reset();
                 // navigate("/", { replace: true });
                 navigate(from, { replace: true });
@@ -47,7 +47,7 @@ const Login = () => {
         signInWithGoogle()
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
+                // console.log(loggedUser);
                 // navigate("/", { replace: true });
                 navigate(from, { replace: true });
             })
@@ -61,7 +61,7 @@ const Login = () => {
         signInWithGithub()
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
+                // console.log(loggedUser);
                 // navigate("/", { replace: true });
                 navigate(from, { replace: true });
             })
@@ -95,8 +95,8 @@ const Login = () => {
                         <p className='register-link'>You don't have an account? go to <Link to="/register" className='register-link-color'>Register</Link></p>
                     </form>
                     <div className='third-party-login'>
-                        <p> <button className='google-btn btn-aling' onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> Continue with Google</button></p>
-                        <p><button className='github-btn' onClick={handleGithubSignIn}><FaGithub></FaGithub>Continue with Github</button></p>
+                        <p> <button className='google-btn btn-align' onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> <span>Continue with Google</span></button></p>
+                        <p><button className='github-btn btn-align' onClick={handleGithubSignIn}><FaGithub></FaGithub><span>Continue with Github</span></button></p>
 
                     </div>
                 </div>

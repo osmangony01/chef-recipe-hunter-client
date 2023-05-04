@@ -6,7 +6,7 @@ import ChefCart from './ChefCart/ChefCart';
 const Home = () => {
 
     const chefData = useLoaderData();
-    console.log(chefData);
+    // console.log(chefData);
 
     return (
         <div>

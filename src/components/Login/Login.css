@@ -60,3 +60,10 @@
     text-align: center;
     margin-bottom: 15px;
   }
+
+  .btn-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }

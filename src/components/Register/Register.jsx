@@ -44,7 +44,7 @@ const Register = () => {
                 console.log(error.message);
             })
 
-        console.log(name, email, password);
+        // console.log(name, email, password);
 
     }
 
@@ -85,7 +85,7 @@ const Register = () => {
                             <input type="text" name="photo_url" className='input-control' placeholder='Enter Photo URL' />
                         </div>
                         <button type="submit" className='submit-btn'>Register</button>
-                        <p className='register-link'>Already have an account? go to <Link to="/login" className='register-link-color'>Register</Link></p>
+                        <p className='register-link'>Already have an account? go to <Link to="/login" className='register-link-color'>Login</Link></p>
                     </form>
                     <ToastContainer></ToastContainer>
                 </div>
