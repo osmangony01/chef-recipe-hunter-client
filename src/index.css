@@ -120,3 +120,12 @@ body {
 
 /* end login and registration section */
 
+.spinner{
+  margin:20px 0 0;
+  text-align: center;
+}
+
+.aliging-item{
+  display: flex;
+  align-items: center;
+}

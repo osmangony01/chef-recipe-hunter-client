@@ -8,7 +8,7 @@
 }
 
 .banner-content{
-    padding: 145px 350px;
+    padding: 110px 350px;
     text-align: center;
     color:white;
 }
@@ -21,7 +21,10 @@
 }
 .banner-content p{
     margin-bottom: 25px;
+    font-size: 17px;
 }
+
+
 .search-filed{
     width: 80%;
     margin: 0 auto;
@@ -41,7 +44,7 @@
     top: 0;
     right: 0;
     background-color: #e70303;
-    padding: 13px;
+    padding: 14px;
 }
 .search:hover{
     border: 1px solid orange;
@@ -54,7 +57,7 @@
 }
 @media screen and (max-width: 992px) {
     .banner-content{
-        padding: 140px 260px;
+        padding: 90px 200px;
     }
     .header{
         height: ;
@@ -63,7 +66,7 @@
 
 @media screen and (max-width: 778px) {
     .banner-content{
-        padding: 120px 120px;
+        padding: 70px 120px;
     }
     .header{
         height: ;
@@ -74,7 +77,10 @@
     .banner-content{
         padding: 50px 60px;
     }
-    .header{
-        height: ;
+    .banner-content h2 {
+        font-size: 24px;
+    }
+    .banner-content p {
+        font-size: 14px;
     }
 }

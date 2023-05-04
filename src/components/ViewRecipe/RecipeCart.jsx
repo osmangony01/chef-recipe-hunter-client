@@ -1,15 +1,27 @@
-import React from 'react';
-import { FaRegStar, FaStar } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaHeart, FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const RecipeCart = ({ recipe }) => {
+    const [disable, setDisable] = useState(false);
 
     const { recipe_name, recipe_img, ingredients, cooking_method, rating } = recipe;
+
+    const handleDisable = () => {
+        setDisable(true);
+        toast("Added Your Favorite Recipe");
+    }
+
 
     return (
         <div className='recipe-item'>
             <div className='recipe-img-field'>
-                <img src={recipe_img} className='recipe-img' alt="" />
+               
+                    <img src={recipe_img} className='recipe-img' alt="" loading="lazy"/>
+                
+
             </div>
             <div className='recipe-info'>
                 <p className='recipe-name'>{recipe_name}</p>
@@ -25,7 +37,16 @@ const RecipeCart = ({ recipe }) => {
                     />
                     <span className='bold rating'>{rating}</span>
                 </p>
+                <p>
+                    <button className={!disable ? "aliging-item favorite-btn" : "aliging-item favorite-btn disable-favorite-btn"} onClick={handleDisable}>
+                        <span>Favorite</span>
+                        <FaHeart className='fav-icon'></FaHeart>
+                        <ToastContainer />
+                    </button>
+
+                </p>
             </div>
+
         </div>
     );
 };

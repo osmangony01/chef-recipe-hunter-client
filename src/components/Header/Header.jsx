@@ -10,7 +10,7 @@ const Header = () => {
             <NavBar></NavBar>
             <div className='banner-content'>
                 <h2>What are your favorite <br />food?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ullam, nostrum labore assumenda pariatur delectus praesentium quo quidem itaque dolorem harum modi? Animi laboriosam debitis dolorem impedit accusamus sequi quidem.</p>
+                <p>Find your next favorite recipe on this user-friendly food recipe website, featuring a diverse selection of dishes, from classic comfort food to international cuisine.</p>
                 <div className='search-filed '>
                     <input className='search' type="text" placeholder='Search...'/>
                     <span className='search-icon'><FaSearch color='white'></FaSearch></span>

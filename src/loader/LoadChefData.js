@@ -1,6 +1,6 @@
 
 const loadChefData = async () => {
-    const data = await fetch(`http://localhost:5000/chefs`);
+    const data = await fetch(`https://chef-recipe-hunter-server-side-sepia.vercel.app/chefs`);
     const chefData = await data.json();
     return chefData;
 }

@@ -8,7 +8,7 @@ const Footer = () => {
                 <img src="/images/footer-icon.jpg" alt="" width="60" height="60"/>
                 <p className='footer-title'>Flavor Frenzy</p>
             </div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, maxime quidem voluptate provident iste illo nesciunt tempora deleniti similique alias nemo non minima dolore sint quasi illum excepturi sit expedita.</p>
+            <p>Discover delicious recipes from around the world, with user reviews, step-by-step instructions, and helpful tips, on this comprehensive food recipe website.</p>
             <div className='footer-icons'>
                 <span className="footer-icon"><FaFacebookF></FaFacebookF></span>
                 <span className="footer-icon"><FaLinkedinIn></FaLinkedinIn></span>
