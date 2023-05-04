@@ -11,6 +11,7 @@ const RecipeCart = ({ recipe }) => {
 
     const handleDisable = () => {
         setDisable(true);
+        console.log('toast');
         toast("Added Your Favorite Recipe");
     }
 
@@ -41,12 +42,10 @@ const RecipeCart = ({ recipe }) => {
                     <button className={!disable ? "aliging-item favorite-btn" : "aliging-item favorite-btn disable-favorite-btn"} onClick={handleDisable}>
                         <span>Favorite</span>
                         <FaHeart className='fav-icon'></FaHeart>
-                        <ToastContainer />
                     </button>
-
                 </p>
             </div>
-
+            <ToastContainer />
         </div>
     );
 };

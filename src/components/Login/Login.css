@@ -53,3 +53,10 @@
     background-color: #8103c9;
     color: white;
   }
+
+  .error{
+    font-size: 14px;
+    color: red;
+    text-align: center;
+    margin-bottom: 15px;
+  }

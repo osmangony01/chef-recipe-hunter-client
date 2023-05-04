@@ -60,11 +60,11 @@ const NavBar = () => {
                 <ul>
                     <li><ActiveLink className="nav-link" to="/">Home</ActiveLink></li>
                     <li><ActiveLink className="nav-link" to="/blog">Blog</ActiveLink></li>
-                    <li><ActiveLink className="nav-link" to="/contact">Contact</ActiveLink></li>
+                    <li><ActiveLink className="nav-link" to="/about">About</ActiveLink></li>
                     {!user && <li><ActiveLink className="nav-link" to="/login">Login</ActiveLink></li>}
                     {user && <li className='user-icon'>
                         <div className="dropdown" onClick={handleDropdown}>
-                            {user.photoURL ? <img src={user.photoURL} alt="user-img" className='user-img dropdown-img' title={user.displayName}/>
+                            {user.photoURL ? <img src={user.photoURL} alt="user" className='user-img dropdown-img' title={user.displayName}/>
                                 : <span className='dropdown-img' title={user.displayName}><FaUserCircle size={32}></FaUserCircle></span>}
                             <div className={dropdown ? "dropdown-child-hide" : "dropdown-child"}>
                                 <a href="#">{user.email}</a>

@@ -1,13 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import NavBar from '../Header/NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import { AuthContext } from '../../provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
     const [passError, setPassError] = useState("");
     const { createUser } = useContext(AuthContext);
+
+    const navigate = useNavigate();
     
 
     const handleRegister = (e) => {
@@ -19,8 +22,12 @@ const Register = () => {
         const photo_url = form.photo_url.value;
 
         setPassError("");
-        if (password < 6) {
+        if (password.length < 6) {
             setPassError("At least 6 characters needed!!");
+            return;
+        }
+        if(email === "" || password === ""){
+            return;
         }
     
         createUser(email, password)
@@ -29,6 +36,9 @@ const Register = () => {
                 console.log(CreateUser);
                 form.reset();
                 updateUserData(result.user, name, photo_url);
+                toast("Registration Successful");
+                navigate("/", {replace: true});
+
             })
             .catch(error => {
                 console.log(error.message);
@@ -68,6 +78,7 @@ const Register = () => {
                         <div className='input-group '>
                             <label htmlFor="" className='login-label'>Password</label>
                             <input type="password" name="password" className='input-control' placeholder='Enter your password' required />
+                            <small className='pass-error'>{passError}</small>
                         </div>
                         <div className='input-group'>
                             <label htmlFor="" className='login-label'>PhotoURL</label>
@@ -76,6 +87,7 @@ const Register = () => {
                         <button type="submit" className='submit-btn'>Register</button>
                         <p className='register-link'>Already have an account? go to <Link to="/login" className='register-link-color'>Register</Link></p>
                     </form>
+                    <ToastContainer></ToastContainer>
                 </div>
             </div>
             <Footer></Footer>

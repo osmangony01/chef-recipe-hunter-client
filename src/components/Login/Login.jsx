@@ -8,6 +8,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 
 const Login = () => {
     const [passShow, setPassShow] = useState(true);
+    const [error, setError] = useState("");
 
     const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -21,7 +22,10 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-
+        setError("")
+        if(email === "" || password === ""){
+            return;
+        }
 
         signIn(email, password)
             .then(result => {
@@ -33,6 +37,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.log(error.message);
+                setError("Incorrect Email or Password!");
             })
         console.log(email, password);
 
@@ -47,6 +52,7 @@ const Login = () => {
                 navigate(from, { replace: true });
             })
             .catch(error => {
+                setError("Incorrect Email or Password!");
                 console.log(error.message);
             })
     }
@@ -60,6 +66,7 @@ const Login = () => {
                 navigate(from, { replace: true });
             })
             .catch(error => {
+                setError("Incorrect Email or Password!");
                 console.log(error.message);
             })
     }
@@ -71,6 +78,7 @@ const Login = () => {
                 <div className='login-section'>
                     <h3 className='login-title'>Login your account</h3>
                     <hr className='line' />
+                    <p className='error'>{error}</p>
                     <form action="" className='form' onSubmit={handleLogin}>
                         <div className='input-group'>
                             <label htmlFor="" className='login-label'>Email</label>
