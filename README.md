@@ -1,13 +1,15 @@
+##  Flavor-Frenzy
+
+The Flavor-Frenzy is a food recipe website
+
 **Features of Flavor Frenzy**
-- User Account
+- User Authentication with Firebase
 - Blog
-- About
-- chef
-- Recipes
-- Rating
-- Firebase integration
+- chef info
+- Recipes info
 - Pdf Generate
+- ContextAPI
 
+**Technology Used:** ReactJS, Firebase
 
-**Live site link:**   
-https://flavor-frenzy-auth.web.app/
+**Live site link:**   https://flavor-frenzy-auth.web.app/
